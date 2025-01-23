@@ -28,10 +28,10 @@ fetchWeatherBtn.addEventListener("click", () => {
       return response.json();
     })
     .then((data) => {
-      displayWeather(data); // Display weather data
+      displayWeather(data); 
     })
     .catch((error) => {
-      displayError(error.message); // Display error message if city is not found
+      displayError(error.message); 
     });
 });
 
@@ -47,7 +47,7 @@ function displayWeather(data) {
 }
 
 function displayError(message) {
-  cityNotFoundEl.textContent = message; // Set the error message
-  cityNotFoundEl.classList.remove("hidden"); // Display the error message
-  weatherResults.classList.add("hidden"); // Hide the weather results
+  cityNotFoundEl.textContent = message; 
+  cityNotFoundEl.classList.remove("hidden"); 
+  weatherResults.classList.add("hidden"); 
 }
